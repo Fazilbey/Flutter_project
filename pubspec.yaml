@@ -1,0 +1,235 @@
+name: kocapeynir_project
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.5 <4.0.0'
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  font_awesome_flutter: ^9.2.0
+  flutter:
+    sdk: flutter
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_launcher_icons: ^0.9.0
+  flutter_test:
+    sdk: flutter
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/app_icon.png"
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^2.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/red_line_head.png
+    - assets/background-paper.jpg
+    - assets/wild.jpg
+    - assets/logo.png
+    - assets/footerback.png
+    - assets/contacts.png
+    - assets/peynir.jpeg
+    - assets/peynir2.jpg
+    - assets/qr.png
+    - assets/footerback.png
+    - assets/card_options.png
+    - assets/siksut.png
+    - assets/renklamlogo.png
+    - assets/saribas-kargo-buz-akusu.png
+
+    -  assets/menu_items/1.png
+    -  assets/menu_items/2.png
+    -  assets/menu_items/3.png
+    -  assets/menu_items/4.png
+    -  assets/menu_items/5.png
+    -  assets/menu_items/6.png
+
+
+    - assets/products/0.jpg
+    - assets/products/1.jpg
+    - assets/products/2.jpg
+    - assets/products/3.jpg
+    - assets/products/4.jpg
+    - assets/products/5.jpg
+    - assets/products/6.jpg
+    - assets/products/7.jpg
+    - assets/products/8.jpg
+    - assets/products/9.jpg
+    - assets/products/10.jpg
+    - assets/products/11.jpg
+    - assets/products/12.jpg
+    - assets/products/13.jpg
+    - assets/products/14.jpg
+    - assets/products/15.jpg
+    - assets/products/16.jpg
+    - assets/products/17.jpg
+    - assets/products/18.jpg
+    - assets/products/19.jpg
+    - assets/products/20.jpg
+    - assets/products/21.jpg
+    - assets/products/22.jpg
+    - assets/products/23.jpg
+    - assets/products/24.jpg
+    - assets/products/25.jpg
+    - assets/products/26.jpg
+    - assets/products/27.jpg
+    - assets/products/28.jpg
+    - assets/products/29.jpg
+    - assets/products/30.jpg
+    - assets/products/31.jpg
+    - assets/products/32.jpg
+    - assets/products/33.jpg
+    - assets/products/34.jpg
+    - assets/products/35.jpg
+    - assets/products/36.jpg
+    - assets/products/37.jpg
+    - assets/products/38.jpg
+    - assets/products/39.jpg
+    - assets/products/40.jpg
+    - assets/products/41.jpg
+    - assets/products/42.jpg
+    - assets/products/43.jpg
+    - assets/products/44.jpg
+    - assets/products/45.jpg
+    - assets/products/46.jpg
+    - assets/products/47.jpg
+    - assets/products/48.jpg
+    - assets/products/49.jpg
+    - assets/products/50.jpg
+    - assets/products/51.jpg
+    - assets/products/52.jpg
+    - assets/products/53.jpg
+    - assets/products/54.jpg
+    - assets/products/55.jpg
+    - assets/products/56.jpg
+    - assets/products/57.jpg
+    - assets/products/58.jpg
+    - assets/products/59.jpg
+    - assets/products/60.jpg
+    - assets/products/61.jpg
+    - assets/products/62.jpg
+    - assets/products/63.jpg
+    - assets/products/64.jpg
+    - assets/products/65.jpg
+    - assets/products/66.jpg
+    - assets/products/67.jpg
+    - assets/products/68.jpg
+    - assets/products/69.jpg
+    - assets/products/70.jpg
+    - assets/products/71.jpg
+    - assets/products/72.jpg
+    - assets/products/73.jpg
+    - assets/products/74.jpg
+    - assets/products/75.jpg
+    - assets/products/76.jpg
+    - assets/products/77.jpg
+    - assets/products/78.jpg
+    - assets/products/79.jpg
+    - assets/products/80.jpg
+    - assets/products/81.jpg
+    - assets/products/82.jpg
+    - assets/products/83.jpg
+    - assets/products/84.jpg
+    - assets/products/85.jpg
+    - assets/products/86.jpg
+    - assets/products/87.jpg
+    - assets/products/88.jpg
+    - assets/products/89.jpg
+    - assets/products/90.jpg
+    - assets/products/91.jpg
+    - assets/products/92.jpg
+    - assets/products/93.jpg
+    - assets/products/94.jpg
+    - assets/products/95.jpg
+    - assets/products/96.jpg
+    - assets/products/97.jpg
+    - assets/products/98.jpg
+    - assets/products/99.jpg
+    - assets/products/100.jpg
+    - assets/products/101.jpg
+    - assets/products/102.jpg
+    - assets/products/103.jpg
+    - assets/products/104.jpg
+    - assets/products/105.jpg
+    - assets/products/106.jpg
+    - assets/products/107.jpg
+
+
+    
+
+
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+    - family: BenchNine
+      fonts:
+        - asset: fonts/BenchNine-Regular.ttf
+        - asset: fonts/BenchNine-Light.ttf
+        - asset: fonts/BenchNine-Bold.ttf
+
+        
+          
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
