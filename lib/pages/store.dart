@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:kocapeynir_project/pages/drawer.dart';
 import 'package:kocapeynir_project/pages/footer.dart';
+import 'package:kocapeynir_project/pages/header.dart';
+import 'package:kocapeynir_project/pages/menu_button.dart';
 // import 'package:url_launcher/url_launcher_string.dart';
 import 'products.dart';
 
@@ -36,86 +38,73 @@ class _StorePageState extends State<StorePage> {
       drawer: MyDrawer(),
       body: SingleChildScrollView(
           child: Column(children: [
+        Header(),
         Container(
-
-            // width: MediaQuery.of(context).size.width,
-            child: Stack(children: [
-          Image.asset(
-            'assets/red_line_head.png',
-            fit: BoxFit.fitHeight,
-            height: 50,
-          ),
-          const Positioned.fill(
-              child: Align(
-                  alignment: Alignment.center,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      InkWell(
-                        // onTap: () {
-                        //   launchUrlString(
-                        //       'https://www.kocabaspeynir.com/magaza/#');
-                        // },
-                        child: Icon(
-                          FontAwesomeIcons.facebookSquare,
-                          size: 16,
-                        ),
-                      ),
-                      SizedBox(width: 8),
-                      InkWell(
-                        // onTap: () {
-                        //   launchUrlString(
-                        //       'https://www.instagram.com/kocabaspeynir/');
-                        // },
-                        child: Icon(
-                          FontAwesomeIcons.instagram,
-                          size: 16,
-                        ),
-                      ),
-                    ],
-                  )))
-        ])),
-        Container(
-          // width: double.infinity,
           height: 270,
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage("assets/wild.jpg"), fit: BoxFit.fitHeight)),
-
-          child: Container(
-            padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+          child: Stack(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/wild.jpg"),
+                    fit: BoxFit.fitHeight,
+                  ),
+                ),
+              ),
+              Positioned(
+                top: 10,
+                left: 10,
+                child: Menu(), // Adjust the context as needed
+              ),
+              Container(
+                padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text(
-                      " Mağaza",
-                      style: TextStyle(
-                        fontFamily: "BenchNine",
-                        fontWeight: FontWeight.bold,
-                        fontSize: 36,
-                      ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          " Mağaza",
+                          style: TextStyle(
+                            fontFamily: "BenchNine",
+                            fontWeight: FontWeight.bold,
+                            fontSize: 36,
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
-        Row(
-          children: [
-            Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  Scaffold.of(context).openDrawer();
-                },
-                child: Text('Open Drawer'),
-              ),
-            )
-          ],
+        Container(
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage('assets/background-paper.jpg'))),
+          child: Container(
+            margin: EdgeInsets.fromLTRB(15, 0, 15, 0),
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    padding: EdgeInsets.fromLTRB(0, 0, 0, 15),
+                    child: Text(
+                      "Ana Sayfa/ Magaza",
+                      style: TextStyle(
+                          fontFamily: "BenchNine",
+                          fontSize: 20,
+                          color: Colors.red),
+                    ),
+                  ),
+                  Icon(Icons.compare_arrows)
+                ]),
+          ),
         ),
+
         SizedBox(
           height: 800,
           child: ListView.builder(
@@ -135,7 +124,7 @@ class _StorePageState extends State<StorePage> {
                   ),
                 ),
                 child: Container(
-                  padding: EdgeInsets.fromLTRB(0, 15, 0, 0),
+                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                   child: Row(
                     children: [
                       if (hasFirstProduct)

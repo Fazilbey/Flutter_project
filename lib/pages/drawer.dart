@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kocapeynir_project/pages/liked.dart';
+import 'package:kocapeynir_project/pages/login.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -93,7 +95,14 @@ class MyDrawer extends StatelessWidget {
               style: TextStyle(color: Colors.white),
             ),
             // Add your child widget here
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        Login()), // Replace LoginPage() with your actual login page widget
+              );
+            },
           ),
           ListTile(
             leading: Icon(Icons.person_2_outlined),
@@ -102,7 +111,14 @@ class MyDrawer extends StatelessWidget {
               style: TextStyle(color: Colors.white),
             ),
             // Add your child widget here
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        Login()), // Replace LoginPage() with your actual login page widget
+              );
+            },
           ),
         ],
       ),

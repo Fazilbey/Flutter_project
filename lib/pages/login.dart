@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:kocapeynir_project/pages/drawer.dart';
 import 'package:kocapeynir_project/pages/footer.dart';
 import 'package:kocapeynir_project/pages/header.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:kocapeynir_project/pages/menu_button.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -15,6 +17,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: MyDrawer(),
       appBar: AppBar(
         toolbarHeight: 0,
       ),
@@ -25,50 +28,59 @@ class _LoginState extends State<Login> {
               children: [
                 Header(),
                 Container(
-                  // width: double.infinity,
                   height: 270,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("assets/wild.jpg"),
-                          fit: BoxFit.fitHeight)),
-
-                  child: Container(
-                    padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                  child: Stack(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage("assets/wild.jpg"),
+                            fit: BoxFit.fitHeight,
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        top: 10, // Adjust the top position as needed
+                        left: 10, // Adjust the left position as needed
+                        child: Menu(), // Replace with your button/widget
+                      ),
+                      Container(
+                        padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                            Text(
-                              "Hesabim",
-                              style: TextStyle(
-                                fontFamily: "BenchNine",
-                                fontWeight: FontWeight.bold,
-                                fontSize: 36,
-                              ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "Hesabim",
+                                  style: TextStyle(
+                                    fontFamily: "BenchNine",
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 36,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "ANASAYFA / HESABIM",
+                                  style: TextStyle(
+                                      fontFamily: 'BenchNine', fontSize: 24),
+                                )
+                              ],
                             ),
                           ],
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "ANASAYFA / HEASABIM",
-                              style: TextStyle(
-                                  fontFamily: 'BenchNine', fontSize: 24),
-                            )
-                          ],
-                        )
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
                 Container(
-                  // 
+                  //
 
-
-                  
                   padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                   decoration: BoxDecoration(
                       image: DecorationImage(
