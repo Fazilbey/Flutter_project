@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:kocapeynir_project/pages/login.dart';
 
 class MyEndDrawer extends StatelessWidget {
   const MyEndDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Drawer(
+    return Scaffold(
       backgroundColor: Colors.black,
-      child: ListView(
-        // Remove padding so the drawer wypełnia całą dostępną przestrzeń.
+      body: ListView(
         padding: EdgeInsets.zero,
         children: [
           SizedBox(
@@ -22,7 +22,6 @@ class MyEndDrawer extends StatelessWidget {
               cursorColor: Colors.white,
             ),
             trailing: Icon(Icons.search),
-            // Add your child widget here
             onTap: () {},
           ),
           ListTile(
@@ -93,7 +92,14 @@ class MyEndDrawer extends StatelessWidget {
               style: TextStyle(color: Colors.white),
             ),
             // Add your child widget here
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        Login()), // Replace LoginPage() with your actual login page widget
+              );
+            },
           ),
           ListTile(
             leading: Icon(Icons.person_2_outlined),
@@ -102,7 +108,14 @@ class MyEndDrawer extends StatelessWidget {
               style: TextStyle(color: Colors.white),
             ),
             // Add your child widget here
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        Login()), // Replace LoginPage() with your actual login page widget
+              );
+            },
           ),
         ],
       ),

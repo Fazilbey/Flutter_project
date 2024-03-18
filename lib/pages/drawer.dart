@@ -10,7 +10,7 @@ class MyDrawer extends StatelessWidget {
     return Drawer(
       backgroundColor: Colors.black,
       child: ListView(
-        // Remove padding so the drawer wypełnia całą dostępną przestrzeń.
+        
         padding: EdgeInsets.zero,
         children: [
           SizedBox(
@@ -24,7 +24,7 @@ class MyDrawer extends StatelessWidget {
               cursorColor: Colors.white,
             ),
             trailing: Icon(Icons.search),
-            // Add your child widget here
+            
             onTap: () {},
           ),
           ListTile(

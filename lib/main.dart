@@ -33,6 +33,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final GlobalKey<ScaffoldState> key = GlobalKey<ScaffoldState>();
   int currentIndex = 0;
 
   final List<Widget> _children = [
@@ -44,12 +45,104 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    double screenwidth = MediaQuery.of(context).size.width;
+    double screenheight = MediaQuery.of(context).size.height;
+    double statusBarHeight = MediaQuery.of(context).padding.top;
+
+    double nonScrollableHeight = screenheight - statusBarHeight;
+
     return Scaffold(
       drawer: MyDrawer(),
-      endDrawer: MyEndDrawer(),
+      key: key,
+      endDrawer: Container(
+        padding: EdgeInsets.all(10),
+        height: nonScrollableHeight,
+        width: 0.7 * screenwidth,
+        color: Colors.black,
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Sepet",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: "BenchNine",
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                ),
+                InkWell(
+                  onTap: () => (),
+                  child: Text(
+                    'Kapat',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: "BenchNine",
+                      fontWeight: FontWeight.bold,
+                      fontSize: 13,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Divider(height: 2),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.fromLTRB(0, 30, 0, 20),
+                      child: Icon(
+                        Icons.add_shopping_cart_outlined,
+                        size: 200,
+                        color: Colors.grey,
+                      ),
+                    ),
+                    Container(
+                      child: Text('SEPETINIZDE ÜRÜN BULUNMUYOR..',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: "BenchNine",
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14,
+                          )),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {},
+                      child: Text(
+                        "Mağaza dön",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: "BenchNine",
+                            fontSize: 18),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.red, // Background color
+
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                        textStyle: TextStyle(fontSize: 16),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                    )
+                  ],
+                )
+              ],
+            )
+          ],
+        ),
+      ),
       appBar: AppBar(
         backgroundColor: Colors.white,
-        toolbarHeight: 0,
+        toolbarHeight: 20,
       ),
       body: _children[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
@@ -58,7 +151,7 @@ class _MyHomePageState extends State<MyHomePage> {
         type: BottomNavigationBarType.fixed,
         currentIndex: currentIndex,
         onTap: onTabTapped,
-        items: const [
+        items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.maps_home_work_outlined),
             label: 'Magaza',
@@ -68,7 +161,12 @@ class _MyHomePageState extends State<MyHomePage> {
             label: 'Favori Listem',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_bag_outlined),
+            icon: GestureDetector(
+              onTap: () {
+                Scaffold.of(context).openEndDrawer();
+              },
+              child: Icon(Icons.shopping_bag_outlined),
+            ),
             label: 'Sepet',
           ),
           BottomNavigationBarItem(
@@ -81,14 +179,12 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void onTabTapped(int index) {
-    // if (index == 2) {
-    //   // If "Sepet" tab is clicked, open the EndDrawer
-    //   Scaffold.of(context).openEndDrawer();
-    // } else {
-      // If other tabs are clicked, update the current index
+    if (index == 2) {
+      Scaffold.of(context).openEndDrawer();
+    } else {
       setState(() {
         currentIndex = index;
       });
     }
   }
-
+}

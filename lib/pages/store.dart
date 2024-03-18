@@ -128,128 +128,132 @@ class _StorePageState extends State<StorePage> {
                   child: Row(
                     children: [
                       if (hasFirstProduct)
-                        Expanded(
-                          child: Card(
-                            margin: EdgeInsets.fromLTRB(15, 0, 5, 10),
-                            // color: Colors.white,
-                            child: Column(
-                              children: [
-                                Container(
-                                  // padding: EdgeInsets.symmetric(horizontal: 5),
-                                  height: 200,
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                      image: AssetImage(
-                                          'assets/products/$firstIndex.jpg'),
-                                      fit: BoxFit.cover,
+                        Container(
+                          child: Expanded(
+                            child: Card(
+                              margin: EdgeInsets.fromLTRB(15, 0, 5, 10),
+                              // color: Colors.white,
+                              child: Column(
+                                children: [
+                                  Container(
+                                    // padding: EdgeInsets.symmetric(horizontal: 5),
+                                    height: 200,
+                                    decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/products/$firstIndex.jpg'),
+                                        fit: BoxFit.fitHeight,
+                                      ),
                                     ),
                                   ),
-                                ),
-                                Container(
-                                  // color: Colors.red,
-                                  // width: double.infinity,
-                                  padding: EdgeInsets.all(10),
-                                  child: Column(
-                                    children: [
-                                      Text(
-                                        productList[firstIndex].name,
-                                        style: TextStyle(
-                                            fontSize: 22,
-                                            fontFamily: "BenchNine"),
-                                      ),
-                                      Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            productList[firstIndex]
-                                                .price
-                                                .toString(),
-                                            style: TextStyle(
-                                                fontSize: 26,
-                                                fontFamily: "BenchNine",
-                                                color: Colors.red[800]),
-                                          ),
-                                          Icon(
-                                            Icons.currency_lira,
-                                            size: 18,
-                                            color: Colors.red,
-                                          ),
-                                          Text(
-                                            "%1 KDV Dahil",
-                                            style: TextStyle(
-                                                fontSize: 18,
-                                                fontFamily: "BenchNine",
-                                                color: Colors.red),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                )
-                              ],
+                                  Container(
+                                    // color: Colors.red,
+                                    // width: double.infinity,
+                                    padding: EdgeInsets.all(10),
+                                    child: Column(
+                                      children: [
+                                        Text(
+                                          productList[firstIndex].name,
+                                          style: TextStyle(
+                                              fontSize: 22,
+                                              fontFamily: "BenchNine"),
+                                        ),
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                              productList[firstIndex]
+                                                  .price
+                                                  .toString(),
+                                              style: TextStyle(
+                                                  fontSize: 26,
+                                                  fontFamily: "BenchNine",
+                                                  color: Colors.red[800]),
+                                            ),
+                                            Icon(
+                                              Icons.currency_lira,
+                                              size: 18,
+                                              color: Colors.red,
+                                            ),
+                                            Text(
+                                              "%1 KDV Dahil",
+                                              style: TextStyle(
+                                                  fontSize: 18,
+                                                  fontFamily: "BenchNine",
+                                                  color: Colors.red),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         ),
                       SizedBox(width: 10), // Adjust spacing between containers
                       if (hasSecondProduct)
-                        Expanded(
-                          child: Card(
-                            margin: EdgeInsets.fromLTRB(15, 0, 5, 10),
-                            // color: Colors.white,
-                            child: Column(
-                              children: [
-                                Container(
-                                  // padding: EdgeInsets.symmetric(horizontal: 5),
-                                  height: 200,
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                      image: AssetImage(
-                                          'assets/products/$secondIndex.jpg'),
-                                      fit: BoxFit.cover,
+                        Container(
+                          child: Expanded(
+                            child: Card(
+                              margin: EdgeInsets.fromLTRB(15, 0, 5, 10),
+                              // color: Colors.white,
+                              child: Column(
+                                children: [
+                                  Container(
+                                    // padding: EdgeInsets.symmetric(horizontal: 5),
+                                    height: 200,
+                                    decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/products/$secondIndex.jpg'),
+                                        fit: BoxFit.fitHeight,
+                                      ),
                                     ),
                                   ),
-                                ),
-                                Container(
-                                  // color: Colors.red,
-                                  // width: double.infinity,
-                                  padding: EdgeInsets.all(10),
-                                  child: Column(
-                                    children: [
-                                      Text(
-                                        productList[secondIndex].name,
-                                        style: TextStyle(
-                                            fontSize: 22,
-                                            fontFamily: "BenchNine"),
-                                      ),
-                                      Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            productList[secondIndex]
-                                                .price
-                                                .toString(),
-                                            style: TextStyle(
-                                                fontSize: 26,
-                                                fontFamily: "BenchNine",
-                                                color: Colors.red[800]),
-                                          ),
-                                          Icon(Icons.currency_lira,
-                                              size: 18, color: Colors.red),
-                                          Text(
-                                            "%1 KDV Dahil",
-                                            style: TextStyle(
-                                                fontSize: 18,
-                                                fontFamily: "BenchNine",
-                                                color: Colors.red),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                )
-                              ],
+                                  Container(
+                                    // color: Colors.red,
+                                    // width: double.infinity,
+                                    padding: EdgeInsets.all(10),
+                                    child: Column(
+                                      children: [
+                                        Text(
+                                          productList[secondIndex].name,
+                                          style: TextStyle(
+                                              fontSize: 22,
+                                              fontFamily: "BenchNine"),
+                                        ),
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                              productList[secondIndex]
+                                                  .price
+                                                  .toString(),
+                                              style: TextStyle(
+                                                  fontSize: 26,
+                                                  fontFamily: "BenchNine",
+                                                  color: Colors.red[800]),
+                                            ),
+                                            Icon(Icons.currency_lira,
+                                                size: 18, color: Colors.red),
+                                            Text(
+                                              "%1 KDV Dahil",
+                                              style: TextStyle(
+                                                  fontSize: 18,
+                                                  fontFamily: "BenchNine",
+                                                  color: Colors.red),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         ),
